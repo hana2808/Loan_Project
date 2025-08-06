@@ -39,8 +39,6 @@ All the details of the study, including graphs and explanations, are available i
 
 6. **Local Flask Application**
 
-       **Structure**
-
 - **api.py**  
   This is the main file that runs the Flask web application.  
   It contains the code to start the server, manage routes (URLs), handle user requests (like when they submit a form), and send back responses (like displaying a webpage).
