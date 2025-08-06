@@ -10,37 +10,33 @@ We explore the data, create key performance indicators (KPIs), build predictive 
 
 **Data source:** Kaggle loan dataset
 
----
 
+The main dataset used in this project is "train.csv", which contains information related to loan applications, including demographic data, financial details, and loan approval status.
+After performing preprocessing steps — such as handling missing values, encoding categorical features, and removing outliers — a clean version of the dataset was created and saved as df2.
+
+Additional engineered variables were added to df2 to support deeper analysis and modeling. This cleaned and enriched dataset (df2) was exported to a separate file and re-imported during the KPI calculation and data visualization phase.
+
+---
 ## Project Outline
 
-1. **Data Understanding**  
+1. **Data Understanding : 0_Data_understanding.ipynb** 
    Gain insights into the dataset, variables, and data quality.
 
-2. **Exploratory Data Analysis (EDA)**  
+2. **Exploratory Data Analysis : 1_EDA.ipynb**  
    Visualize and summarize the data to uncover patterns and relationships.
 
-3. **Data Preprocessing**  
+3. **Data Preprocessing : 2_Preprocessing.ipynb**  
    Clean the data, handle missing values, encode categorical variables, and prepare features for modeling.
 
-4. **Key Performance Indicators (KPI)**  
+4. **Key Performance Indicators : 3_KPI.ipynb**  
    Define and calculate relevant KPIs to evaluate loan applicant profiles and approval trends.
 
-5. **Modeling**  
+5. **Modeling : 4_Modeling.ipynb**  
    Build machine learning models to predict loan approval status.
 
-6. **Model Interpretation and Validation**  
-   Analyze model performance, validate results, and interpret important features.
-
-7. **Deployment and Prediction via API**  
-   Provide a web API to enable real-time loan approval predictions.
-
-8. **Conclusion**  
-   Summarize findings, challenges, and future improvements.
-
----
 
 ## How to Use This Repository
 
-- Explore Jupyter notebooks and scripts in the `/notebooks` 
+- Step 1: Download the raw dataset train.csv and run scripts 0_Data_understanding.ipynb, 1_EDA.ipynb, and 2_Preprocessing.ipynb for data exploration and preprocessing.
+- Step 2: Then, download the cleaned and enriched dataset df2.csv and run scripts 3_KPI.ipynb and 4_Modeling.ipynb to train and use the predictive model.
 
