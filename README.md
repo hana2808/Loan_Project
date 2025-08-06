@@ -37,15 +37,15 @@ Additional engineered variables were added to df2 to support deeper analysis and
 6. **Local Flask Application**
 
 
-## **Structure**
+#### **Structure**
 
 
 - **api.py**  
-  This is the main file that runs your Flask web application.  
+  This is the main file that runs the Flask web application.  
   It contains the code to start the server, manage routes (URLs), handle user requests (like when they submit a form), and send back responses (like displaying a webpage).
 
 - **model.py**  
-  This file contains the "business logic" or core functionality of your app.  
+  This file contains the "business logic" or core functionality of the app.  
   For example, here you might have the model that decides if a loan should be approved or rejected based on the data received.  
   This is where you write rules, calculations, or algorithms to determine the outcome.
 
