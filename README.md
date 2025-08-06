@@ -50,15 +50,16 @@ It allows the user to submit data via a form and returns either an acceptance or
 
 ## **Project Structure**
 
-mon_projet/
+📁 mon_projet/
 │
-├── api.py          # Main program that runs the Flask application
-├── model.py        # Contains the model or business logic
+├── 📄 api.py              # Programme principal qui exécute l'application Flask
+├── 📄 model.py            # Contient le modèle ou la logique métier
 │
-└── templates/      # Folder containing HTML templates
-    ├── form.html
-    ├── valid.html
-    └── refused.html
+└── 📁 templates/          # Dossier contenant les templates HTML
+    ├── 📄 form.html       # Formulaire de demande de prêt
+    ├── 📄 valid.html      # Page de validation (prêt accepté)
+    └── 📄 refused.html    # Page de refus (prêt non accordé)
+
 
 
 
@@ -72,6 +73,7 @@ mon_projet/
 
 - Open the homepage to submit data through the form.  
 ![Application Preview](LienAPI.png)
+
 - Depending on the rule in `model.py`:  
   - If the data is **valid**, `valid.html` is displayed.  
   - If the data is **rejected**, `refused.html` is displayed.  
