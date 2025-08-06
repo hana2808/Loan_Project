@@ -50,22 +50,36 @@ It allows the user to submit data via a form and returns either an acceptance or
 
 ## **Project Structure**
 
-📁 mon_projet/
-│
-├── 📄 api.py              # Programme principal qui exécute l'application Flask
-├── 📄 model.py            # Contient le modèle ou la logique métier
-│
-└── 📁 templates/          # Dossier contenant les templates HTML
-    ├── 📄 form.html       # Formulaire de demande de prêt
-    ├── 📄 valid.html      # Page de validation (prêt accepté)
-    └── 📄 refused.html    # Page de refus (prêt non accordé)
+
+---
+
+## Explanation
+
+- **api.py**  
+  This is the main file that runs your Flask web application.  
+  It contains the code to start the server, manage routes (URLs), handle user requests (like when they submit a form), and send back responses (like displaying a webpage).
+
+- **model.py**  
+  This file contains the "business logic" or core functionality of your app.  
+  For example, here you might have the model that decides if a loan should be approved or rejected based on the data received.  
+  This is where you write rules, calculations, or algorithms to determine the outcome.
+
+- **templates/**  
+  This is a special folder that holds the HTML files — the web pages your app shows to users. Flask looks here to find these templates.
+
+  - **form.html**  
+    This page shows a form where users can apply for a loan (e.g., entering their name, income, loan amount, etc.).
+
+  - **valid.html**  
+    If the loan application is approved, this page is displayed to inform the user that their loan is accepted.
+
+  - **refused.html**  
+    If the loan is denied, this page is shown to let the user know their loan was not approved.
 
 
 
 
-- **`api.py`**: Starts the Flask server and handles the routes.  
-- **`model.py`**: Contains the logic to validate or reject the input.  
-- **`templates/`**: Contains the HTML files rendered in the browser.  
+
 
 
 
