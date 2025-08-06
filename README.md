@@ -34,26 +34,11 @@ Additional engineered variables were added to df2 to support deeper analysis and
 5. **Modeling : 4_Modeling.ipynb**  
    Build machine learning models to predict loan approval status.
 
-
-## How to Use This Repository
-
-- **Step 1** : Download the raw dataset ***train.csv*** and run scripts ***0_Data_understanding.ipynb***, ***1_EDA.ipynb***, and ***2_Preprocessing.ipynb*** for data exploration and preprocessing.
-- **Step 2** : Then, download the cleaned and enriched dataset ***df2.csv*** and run scripts ***3_KPI.ipynb*** and ***4_Modeling.ipynb*** to train and use the predictive model.
+6. **Local Flask Application**
 
 
-# Local Flask Application
+## **Structure**
 
-This application is a simple example of a local API with a small Python model and HTML pages.  
-It allows the user to submit data via a form and returns either an acceptance or a rejection based on the rule defined in `model.py`.  
-
----
-
-## **Project Structure**
-
-
----
-
-## Explanation
 
 - **api.py**  
   This is the main file that runs your Flask web application.  
@@ -77,20 +62,16 @@ It allows the user to submit data via a form and returns either an acceptance or
     If the loan is denied, this page is shown to let the user know their loan was not approved.
 
 
+## How to Use This Repository
 
+- **Step 1** : Download the raw dataset ***train.csv*** and run scripts ***0_Data_understanding.ipynb***, ***1_EDA.ipynb***, and ***2_Preprocessing.ipynb*** for data exploration and preprocessing.
+- **Step 2** : Then, download the cleaned and enriched dataset ***df2.csv*** and run scripts ***3_KPI.ipynb*** and ***4_Modeling.ipynb*** to train and use the predictive model.
+- **Step 3** 
 
+1. Run the 'model.py' file to train and save the model.
+2. Run the 'app.py' file to start the Flask server.
+3. Once the API is running, a link will appear in the terminal like this:
 
-
-
-
-## **How It Works**
-
-- Open the homepage to submit data through the form.  
-![Application Preview](LienAPI.png)
-
-- Depending on the rule in `model.py`:  
-  - If the data is **valid**, `valid.html` is displayed.  
-  - If the data is **rejected**, `refused.html` is displayed.  
-
+Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 
 
