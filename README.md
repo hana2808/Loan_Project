@@ -67,9 +67,8 @@ Additional engineered variables were added to df2 to support deeper analysis and
 - **Step 1** : Download the raw dataset ***train.csv*** and run scripts ***0_Data_understanding.ipynb***, ***1_EDA.ipynb***, and ***2_Preprocessing.ipynb*** for data exploration and preprocessing.
 - **Step 2** : Then, download the cleaned and enriched dataset ***df2.csv*** and run scripts ***3_KPI.ipynb*** and ***4_Modeling.ipynb*** to train and use the predictive model.
 - **Step 3** 
-
-1. Run the 'model.py' file to train and save the model.
-2. Run the 'app.py' file to start the Flask server.
+1. Run the ***model.py*** file to train and save the model.
+2. Run the ***app.py*** file to start the Flask server.
 3. Once the API is running, a link will appear in the terminal like this:
 
 Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
