@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loan Application - Bank Haolim</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f3f4f6;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 420px;
+      border-top: 8px solid #e6002f;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      gap: 10px;
+    }
+
+    .logo-symbol {
+      width: 20px;
+      height: 20px;
+      background-color: #e6002f;
+      transform: rotate(45deg);
+      border-radius: 4px;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: bold;
+      color: #2c3e50;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #34495e;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #e6002f;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .result {
+      background: #f0f9f4;
+      border: 1px solid #2c8f6d;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      color: #155724;
+    }
+
+    .error {
+      background: #fdecea;
+      border: 1px solid #e74c3c;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      color: #a94442;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <div class="logo-container">
+      <div class="logo-symbol"></div>
+      <div class="logo-text">
+        Bank Haolim
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Israel.svg" alt="Flag of Israel" width="22">
+      </div>
+    </div>
+
+    <h2>Loan Application</h2>
+
+    {% if error %}
+      <div class="error">{{ error }}</div>
+    {% endif %}
+
+    {% if prediction is not none %}
+      <div class="result">
+        <p><strong>Result:</strong> {{ "Approved" if prediction == 1 else "Rejected" }}</p>
+        {% if probability %}
+          <p><strong>Probability:</strong> {{ probability }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <form method="post" action="/predict">
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" placeholder="e.g. 30" required min="18" step="1" value="{{ request.form.age or '' }}">
+
+      <label for="Credit_History">Credit History</label>
+      <select id="Credit_History" name="Credit_History" required>
+        <option value="">-- Select --</option>
+        <option value="1" {% if request.form.Credit_History == "1" %}selected{% endif %}>Good (1)</option>
+        <option value="0" {% if request.form.Credit_History == "0" %}selected{% endif %}>Bad (0)</option>
+      </select>
+
+      <label for="LoanAmountScale">Loan Amount (in thousands)</label>
+      <input type="number" id="LoanAmountScale" name="LoanAmountScale" placeholder="e.g. 120" required step="0.01" min="0"
+             value="{{ request.form.LoanAmountScale or '' }}">
+
+      <label for="TotalIncome">Total Income (₪)</label>
+      <input type="number" id="TotalIncome" name="TotalIncome" placeholder="e.g. 5000" required step="0.01" min="0"
+             value="{{ request.form.TotalIncome or '' }}">
+
+      <label for="MonthlyPayment">Estimated Monthly Payment (₪)</label>
+      <input type="number" id="MonthlyPayment" name="MonthlyPayment" placeholder="e.g. 300" required step="0.01" min="0"
+             value="{{ request.form.MonthlyPayment or '' }}">
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+</body>
+</html>

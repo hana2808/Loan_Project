@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Loan Application - Approved</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f0f9f4; display: flex; align-items: center; justify-content: center; min-height:100vh; margin:0; }
+    .card { background:white; padding:30px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.1); max-width:500px; width:100%; }
+    .status { color:#155724; font-size:24px; font-weight:bold; margin-bottom:10px; }
+    .details { margin-top:10px; }
+    .btn { margin-top:20px; display:inline-block; padding:12px 20px; background:#e6002f; color:white; text-decoration:none; border-radius:8px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="status">✅ Loan Approved</div>
+    <div>Your loan application has been deemed <strong>approved</strong>.</div>
+    <div class="details">
+      <p><strong>Approval probability:</strong> {{ probability }}</p>
+      <p><strong>Input used:</strong> {{ input_vector }}</p>
+    </div>
+    <a href="/" class="btn">New Application</a>
+  </div>
+</body>
+</html>
