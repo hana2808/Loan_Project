@@ -16,6 +16,9 @@ After performing preprocessing steps — such as handling missing values, encodi
 
 Additional engineered variables were added to df2 to support deeper analysis and modeling. This cleaned and enriched dataset (df2) was exported to a separate file and re-imported during the KPI calculation and data visualization phase.
 
+All the details of the study, including graphs and explanations, are available in the file **Projet_Data_Analyst.pdf**.
+
+
 ---
 ## Project Outline
 
