@@ -37,6 +37,6 @@ Additional engineered variables were added to df2 to support deeper analysis and
 
 ## How to Use This Repository
 
-- **Step 1** : Download the raw dataset ***train.csv*** and run scripts *0_Data_understanding.ipynb*, *1_EDA.ipynb*, and *2_Preprocessing.ipynb* for data exploration and preprocessing.
-- **Step 2** : Then, download the cleaned and enriched dataset ***df2.csv*** and run scripts *3_KPI.ipynb* and *4_Modeling.ipynb* to train and use the predictive model.
+- **Step 1** : Download the raw dataset ***train.csv*** and run scripts ***0_Data_understanding.ipynb***, ***1_EDA.ipynb***, and ***2_Preprocessing.ipynb*** for data exploration and preprocessing.
+- **Step 2** : Then, download the cleaned and enriched dataset ***df2.csv*** and run scripts ***3_KPI.ipynb*** and ***4_Modeling.ipynb*** to train and use the predictive model.
 
